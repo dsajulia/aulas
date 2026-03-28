@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class Variaveis : MonoBehaviour
 {
-    int numero1 ;
-        int numero2 ;
+    int numero1, numero2, resultadoSub ;
 
     void Start()
     {
        numero1 = 10;
        numero2 = 20;
        Soma();
-       Multiplicacao(5, 10);   
-    }
+       Multiplicacao(5, 10);  
+        resultadoSub = Sub(20, 5);
+        Debug.Log(resultadoSub);
+           }
     void Update()
     {
         
@@ -27,5 +28,10 @@ public class Variaveis : MonoBehaviour
         int resultado;
         resultado = numA * numB;
         Debug.Log(resultado);
+    }
+    int Sub( int numA, int numB)
+    {
+        int resultado = numA - numB;
+        return resultado;
     }
 }
