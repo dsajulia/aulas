@@ -2,18 +2,23 @@ using UnityEngine;
 
 public class Variaveis : MonoBehaviour
 {
-    int vidaPlayer = 10 ;
-    int atackEnemy = 5 ;
-    float jumpForce = 5.5f ;
-    bool mortePlayer = false;
-    string nomePlayer = "Julia";
+    int numero1 ;
+        int numero2 ;
     void Start()
     {
-         
+       numero1 = 10;
+       numero2 = 20;
+       Soma();
     }
-
     void Update()
     {
-        print(vidaPlayer);
+        
     }
+    void Soma()
+    {
+        int resultado;
+        resultado = numero1 + numero2;
+        Debug.Log(resultado);
+    }
+    
 }
