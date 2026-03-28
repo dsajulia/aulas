@@ -3,35 +3,21 @@ using UnityEngine;
 public class Variaveis : MonoBehaviour
 {
     int numero1, numero2, resultadoSub ;
+    int vidaPlayer = 100, ataqueInimigo = 10, vidaAtual = 40, ataqueRecebido;
 
     void Start()
     {
-       numero1 = 10;
-       numero2 = 20;
-       Soma();
-       Multiplicacao(5, 10);  
-        resultadoSub = Sub(20, 5);
-        Debug.Log(resultadoSub);
-           }
+       int ataqueRecebido = vida(vidaPlayer, ataqueInimigo, vidaAtual);
+       Debug.Log("O ataque recebido é: " + ataqueRecebido + " golpes");
+    }
     void Update()
     {
         
     }
-    void Soma()
+    
+    int vida(int vidaPlayer, int ataqueInimigo, int vidaAtual)
     {
-        int resultado;
-        resultado = numero1 + numero2;
-        Debug.Log(resultado);
-    }
-    void Multiplicacao(int numA, int numB)
-    {
-        int resultado;
-        resultado = numA * numB;
-        Debug.Log(resultado);
-    }
-    int Sub( int numA, int numB)
-    {
-        int resultado = numA - numB;
-        return resultado;
+       ataqueRecebido = (vidaPlayer - vidaAtual)/ataqueInimigo;
+         return ataqueRecebido;
     }
 }
